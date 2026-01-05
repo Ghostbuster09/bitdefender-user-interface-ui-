@@ -1,0 +1,95 @@
+https://www.creative-tim.com/twcomponents/cheatsheet- Tailwind component cheat sheet
+
+
+cd .. - To exit folder in cmd.
+
+🟢I've got two tailwind and vite starter template pack in CBFW💯 folder.
+Just run npm install to download node_modules and npm run dev to start the project.
+the tailwind-vs-code2 is the best starter i think.
+
+🟢On cmd
+npm create vite@latest
+project name: tailwind-vs-code
+Select a framework: Vanilla, Selet a variant: JavaScript
+Use rolldown-vite (Experimental)?: No
+Install with npm and start now? Yes
+
+
+🟢Delete id="app" from <div id="app"></div> in index.html.
+get rid of everything in main.js in src folder, leave the- import './style.csss'
+get rid of everything inside style.css in src folder.
+delete counter.js and javascript.svg files inside src folder.
+delete vite.svg inside public folder.
+try running hello world in index.html as an example and see if it works.
+then write npm run dev in terminal and follow the link-  ➜  Local:   http://localhost:5173/
+
+🟢install and configure tailwind in terminal and also install tailwind css plugin for vite which is @tailwindcss/vite: 
+this is it- npm install tailwindcss @tailwindcss/vite- write in terminal
+
+if it doesn't download because script is disabled on the system then: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+🟢go to main.js and write: import './style.css'
+go to style.css and write: @import 'tailwindcss';
+
+open a file name: vite.config.js in the tailwind-vs-code folder and write:
+import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
+
+export default defineConfig({
+  plugins: [
+    tailwindcss()
+  ]
+});
+
+then run npm run dev - to see result.
+
+🟢Go to extension and install tailwind css intellisence for advanced features such as autocomplete, syntax highlighting, and linting.
+Go to extension and install Tailwind Docs for quick access of tailwind documentation to lookup tailwind classes to use within VS CODE install
+
+
+🟢To access the documentation, click on the serach and show and run command and type tailwind and youd see all the list: >tailwind or click shift ctrl p
+
+🟢With tailwind youd end up with many classes, install 'tailwind fold' on extension: Improves code readability by folding class attributes.
+Tailwind Fold will automatically folds you classes, and if you click on it, it will expand it.
+To toggle everything, ctrl + alt + a to expand then ctrl + alt + a to collapse. On mac ctrl option a
+
+
+
+💠A simpler step
+or you can create a folder and simply name them accordingly and put thier info inside.
+
+Use starter template with a beginner-friendly README and step-by-step guide. Use the folder inside the zip file.
+Open folder in VS CODE, run npm install in the terminal, Run npm run dev and open the URL Vite shows (usually http://localhost:5173).
+You can always have a extra copy of this folder and reuse it for another project.
+
+
+🟢The folder contains Tailwind + Vite starter template.
+Vitefiles vite.config.js - Vite config, index.html- Vite's entry HTML, src/main.js- vite entry JS, vite in package.json.
+Tailwind files- tailwind.config.js- Tailwind setup, postcss.config.js → connects Tailwind to CSS,
+src/style.css → @tailwind base/components/utilities, "tailwindcss", "postcss", "autoprefixer" in package.json
+
+🟢npm install
+Downloads all required packages into node_modules, npm install is the one that downloads node modules.
+It reads package.json to know what to download aka uses package.json as the instruction list.
+Node modules is like the actual engines/tools.
+This because package.json says "tailwindcss" "vite" "postcss" etc.
+Once npm install finishes: Tailwind and Vite live locally in node_modules, it will still work even without internet or if tailwinds website disappear
+
+Tailwind’s real code lives in node_modules/tailwindcss, Vite’s real code lives in node_modules/vite.
+Your config files just tell those tools how to behave.
+
+🟢When you upload your work to the internet, you upload everything except node_modules, and dist.
+You cannot reuse node_modules because its huge and can break on another machine.
+The server will then run npm install and npm run build.
+if you create a new javascript file, create it under src/ and then import : import './app.js'-  all your project code lives in src/.
+
+
+If tailwind or vite updates you can update manually by npm update, or safely use: npm install tailwindcss@latest vite@latest -D
+This will manually update all three: package.json (version numbers change), node_modules (new code is downloaded), package-lock.json (lockfile updated).
+
+
+🟢Vite is a development and build tool for modern web projects.
+It is a super-fast local server while you code, it is a builder that prepares your site for production.
+During development(npm run dev), vite is used to start a local server, instantly reload page when you save a file, and it also handles modern javascript imports.
+and it makes Tailwind updates appear instantly.
+Vite = fast dev server + production builder.

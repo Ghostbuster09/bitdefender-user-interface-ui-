@@ -1,0 +1,104 @@
+🟢The universal selector (*) selects all HTML elements on the page.
+* {
+  text-align: center;
+  color: blue;
+}
+
+box-sizing: use to define how the width and height of an element is calculated.
+box-sizing: border-box; - means the width will be the same actual width
+box-sizing: content-box; width and height of the properties will include the content border and padding not included.
+
+🟢max-width sets the maximum width of an element. best for creating responsive layouts.
+max-width can have the length, % or none. none- means there is no maximum width.
+using max-width will improve the browser's handling on small windows.
+prevents element from stretching too wide, adapts to smaller screens, while keeping layout.
+
+height		Sets the height of an element
+max-height	Sets the maximum height of an element
+max-width	Sets the maximum width of an element
+min-height	Sets the minimum height of an element
+min-width	Sets the minimum width of an element, can be smaller bit not larger
+width		Sets the width of an element
+
+
+
+🟢CSS Flexbox is short for the CSS Flexible Box Layout module.
+Flexbox is short for the CSS Flexible Box Layout module.
+Flexbox is a layout model for arranging items {horizontally(row) or vertically(column)} within a container, in a flexible and responsive way.
+
+CSS Flexbox is used for a one-dimensional layout, with rows OR columns. while,
+CSS Grid is used for a two-dimensional layout, with rows AND columns.
+
+Flexbox can be just to position buttons inside an element like navigation or header or div.
+Flexbox makes it easier to design a flexible responsive layout structure, without using float or positioning.
+display: flex; arranges the whole small div that's inside a larger div into a row. must be set to flex or inline-flex;
+Flex-direction:; specifies display-direction of flex items in the flex container. can have one of the following values row, column, row-reverse, column reverse.
+eg flex-direction: row; row-reverse- value displays the flex items horizontally (right to left): column-reverse vertically (bottom to top):
+flex-wrap specifies whether flex items should wrap or not, if not enough room for them on one flex line. nowrap, wrap wrap-reverse. flex-wrap: nowrap;
+flex-flow is a shorthand property for setting both the flex-direction and flex-wrap property. eg flex-flow: row wrap;
+
+🟢Justify-content is used to align the flex items when they do not use all available space on the main-axis (horizontally). like all <div> in one big <div>. It has property such as
+justify-content: center; positions the flex items in the center of the container
+justify-content: flex-start; positions at the beginning of the container (this is default)
+justify-content: flex-end; positions the flex items at the end of the container.
+justify-content: space-around; displays the flex items with space around them
+justify-content: space-between; displays the flex items with space between them
+justify-content: space-evenly; displays the flex items with equal space around them.
+
+🟢align-items
+align-items property is used to align the flex items when they do not use all available space on the cross-axis (vertically). opposite of justify.
+align-items: center; aligns the flex items in the middle of the container, baseline;(aligns the flex items at the baseline of the container);
+align-items: flex-start(top); flex-end(bottom);
+stretch;(stretches the flex items to fill the container equal to "normal" which is default.
+
+
+🟢Align-content
+The align-content property is similar to align-items, but instead of aligning flex items, it aligns the flex lines.
+align-content: center; stretch, flex-start, flex-end, space-around, space-between, space-evenly.
+
+🟢Grid offers a grid-based layout system, with rows and columns. Consists of a Grid Container, and Grid Items.
+The Grid Layout Module allows developers to easily create complex web layouts.
+design a responsive layout structure, without using float or positioning.
+
+A grid container contains one or more grid items arranged in columns and rows.
+An element becomes a grid container when its display property is set to grid or inline-grid.
+Grid container defines the number and size of the grid columns and rows.
+For this use:
+grid-template-columns - Defines the number and width of the columns in the grid
+grid-template-rows - Defines the number and height of the rows in the grid
+grid-template-areas - Defines how to display columns and rows, using named grid items
+
+To create a grid layout with 3 columns of equal width, use the "auto" keyword.
+eg #container {display:grid; grid-template-columns: auto auto auto;}
+
+For 3 columns: 2 xolumns with a fixed width, and 1 column with sizze "auto"
+grid-template-columns: 80px 200px auto;
+
+fr unit stands for fraction, automatically divides the available space into fractions. 1fr takes 1 fraction of the available space, 2fr takes 2 fractions.
+
+repeat() function repeats a set of columns or rows in a grid. grid-template-columns: repeat(3, 1fr);
+
+minmax() function defines a size-range greater than or equal to a min value and less than or equal to a max value.
+grid-template-columns: minmax(80px, 1fr) 150px 150px;
+
+
+The space between the rows and columns in a grid container are called gaps (or gutters).
+They are created betwen not on the outer edges of grid container.
+By using column-gap: 50px; specifies the gaps between the columns in the grid.
+row-gap: 50px; specify a 50pixels gap between the rows in the grid.
+
+A single value for gap will provided the same gap for both rows and columns
+Two values with be provided for the first value "row-gap" then second value "column-gap".
+gap: 50px;
+gap: 50px 100px; gap between rows 50 and the gap between columns 100.
+
+
+You can define the alignment of the grid content inside the grid container using:
+justify-content - Aligns grid content when it does not use all available space on the main-axis (horizontally)
+align-content - Aligns the grid content when it does not use all available space on the cross-axis (vertically)
+place-content - Shorthand property for align-content and justify-content
+
+grid items tellls you where to start and end a grid item by using followiing properties.
+grid-column-start; grid-column-end; grid-column; grid-row-start; grid-row-end -grid-row.
+
+grid-column-start: 1;(starts with one grid item)  grid-column-end: 3; grid-column: 1 / span 2; grid-row-start: 1; grid-row: 1 / span 2;
